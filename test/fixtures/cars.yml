@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  type: 
+  year: 1
+  color: MyString
+  sunroof: false
+  performance: 1
+  seat_heaters: false
+
+two:
+  name: MyString
+  type: 
+  year: 1
+  color: MyString
+  sunroof: false
+  performance: 1
+  seat_heaters: false
