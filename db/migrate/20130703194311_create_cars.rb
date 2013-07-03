@@ -2,7 +2,7 @@ class CreateCars < ActiveRecord::Migration
   def change
     create_table :cars do |t|
       t.string :name
-      t.string :type
+      t.string :car_type
       t.integer :year
       t.string :color
       t.boolean :sunroof, null:false, default: false

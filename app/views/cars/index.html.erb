@@ -1,4 +1,6 @@
 <h1> General Assembly Motor Company </h1>
 
-<%= car.name %>
 
+<% @cars.each do |car| %>
+  <%= car.name %>
+  <% end %>
