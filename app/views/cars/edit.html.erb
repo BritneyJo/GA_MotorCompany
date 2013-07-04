@@ -19,10 +19,12 @@ Performance:
 <%= f.text_field :performance %>
 
 Sun Roof:
-<%= f.text_field :sunroof %>
+yes<%= f.radio_button :sunroof, true %>
+no<%= f.radio_button :sunroof, false %>
 
 Seat Heaters:
-<%= f.text_field :seat_heaters %>
+yes<%= f.radio_button :seat_heaters, true %>
+no<%= f.radio_button :seat_heaters, false %>
 
 <%= f.submit 'edit!' %>
 <% end %>

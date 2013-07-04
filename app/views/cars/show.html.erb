@@ -10,9 +10,9 @@
 
   <li><b>Performance:</b> <%= @car.performance %></li>
 
-  <li><b>Sun Roof:</b> <%= @car.sunroof %></li>
+  <li><b>Sun Roof:</b> <%= yesno(@car.sunroof) %></li>
 
-  <li><b>Seat Heaters:</b> <%= @car.seat_heaters %></li>
+  <li><b>Seat Heaters:</b> <%= yesno(@car.seat_heaters) %></li>
 </ul>
 
 <nav>
