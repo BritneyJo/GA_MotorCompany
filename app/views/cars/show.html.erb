@@ -1,0 +1,21 @@
+
+<h2> <%= @car.name %> </h2>
+
+<ul>
+  <li><b>Type:</b> <%= @car.car_type %></li>
+
+  <li><b>Year:</b> <%= @car.year %></li>
+
+  <li><b>Color:</b> <%= @car.color %></li>
+
+  <li><b>Performance:</b> <%= @car.performance %></li>
+
+  <li><b>Sun Roof:</b> <%= @car.sunroof %></li>
+
+  <li><b>Seat Heaters:</b> <%= @car.seat_heaters %></li>
+</ul>
+
+<nav>
+  <%= link_to 'edit', edit_car_path(@car) %>
+  <%= link_to 'delete', @car, method: :delete, data: { confirm: 'Are you sure?'} %>
+</nav>
