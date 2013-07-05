@@ -11,11 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130703223622) do
+ActiveRecord::Schema.define(:version => 20130705103117) do
+
+  create_table "bodies", :force => true do |t|
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "cars", :force => true do |t|
     t.string   "name"
-    t.string   "car_type"
     t.integer  "year"
     t.string   "color"
     t.boolean  "sunroof",      :default => false, :null => false
@@ -23,6 +28,16 @@ ActiveRecord::Schema.define(:version => 20130703223622) do
     t.boolean  "seat_heaters", :default => false, :null => false
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
+    t.integer  "engine_id"
+    t.integer  "body_id"
+    t.string   "image_url"
+  end
+
+  create_table "engines", :force => true do |t|
+    t.string   "description"
+    t.string   "fuel"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end

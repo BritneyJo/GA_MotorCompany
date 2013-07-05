@@ -10,10 +10,16 @@
 
 <h1> General Assembly Motor Company </h1>
 
-<p>
-  <%= link_to 'All Cars', cars_path %>
-  <%= link_to 'Add Car', new_car_path %>
-</p>
+<div class="navbar navbar-inverse">
+  <div class="navbar-inner">
+    <a class="brand" >GA MC</a>
+    <ul class="nav">
+      <li><%= link_to 'View Cars', cars_path %></li>
+      <li><%= link_to 'Add Car', new_car_path %></li>
+    </ul>
+  </div>
+</div>
+
 
 <%= yield %>
 

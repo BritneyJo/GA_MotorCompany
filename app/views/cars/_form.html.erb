@@ -1,0 +1,41 @@
+
+<form class="form-horizontal">
+  <div class="control-group">
+    <%= form_for(@car) do |f| %>
+    <label class="control-label" for="inputEmail">Make & Model:<%= f.text_field :name %> </label>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputPassword">Year:<%= f.text_field :year %></label>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputEmail">Body:<%= f.select(:body_id, Body.all.map {|c| [c.description,  c.id]} ) %></label>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputEmail">Color:<%= f.text_field :color %></label>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputEmail">Engine:<%= f.select(:engine_id, Engine.all.map {|c| ["#{c.description} - #{c.fuel}",  c.id]} ) %>
+</label>
+  </div>
+    <div class="control-group">
+    <label class="control-label" for="inputEmail">Performance: <%= f.text_field :performance %></label>
+  </div>
+    <div class="control-group">
+    <label class="control-label" for="inputEmail">Sun Roof:
+yes<%= f.radio_button :sunroof, true %>
+no<%= f.radio_button :sunroof, false %></label>
+  </div>
+      <div class="control-group">
+    <label class="control-label" for="inputEmail">Seat Heaters:
+yes<%= f.radio_button :seat_heaters, true %>
+no<%= f.radio_button :seat_heaters, false %>
+</label>
+  </div>
+      <div class="control-group">
+    <label class="control-label" for="inputEmail">Image:
+<%= f.text_field :image_url %></label>
+  </div>
+<button type="submit" class="btn"><%= f.submit submit_button_value %></button>
+<% end %>
+  </div>
+</form>

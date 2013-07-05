@@ -1,27 +1,3 @@
 <h2>New Car</h2>
 
-<%= form_for(@car) do |f| %>
-
-Make & Model:
-<%= f.text_field :name %>
-
-Type:
-<%= f.text_field :car_type %>
-
-Year:
-<%= f.text_field :year %>
-
-Color:
-<%= f.text_field :color %>
-
-Performance:
-<%= f.text_field :performance %>
-
-Sun Roof:
-<%= f.select :sunroof [true, false] %>
-
-Seat Heaters:
-<%= f.text_field :seat_heaters %>
-
-<%= f.submit 'add new car!' %>
-<% end %>
+<%= render partial: 'form', locals: {submit_button_value:'Add!' }%>

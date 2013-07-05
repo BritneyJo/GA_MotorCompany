@@ -2,13 +2,17 @@
 <h2> <%= @car.name %> </h2>
 
 <ul>
-  <li><b>Type:</b> <%= @car.car_type %></li>
+  <li> <%= image_tag image_path(@car.image_url), width: 400 %></li>
 
   <li><b>Year:</b> <%= @car.year %></li>
 
+  <li><b>Body:</b> <%= @car.body.try(:description) %></li>
+
   <li><b>Color:</b> <%= @car.color %></li>
 
-  <li><b>Performance:</b> <%= @car.performance %></li>
+  <li><b>Engine:</b> <%= @car.engine.try(:description) %> - <%= @car.engine.try(:fuel) %></li>
+
+  <li><b>Performance:</b> <%= @car.performance %> hp</li>
 
   <li><b>Sun Roof:</b> <%= yesno(@car.sunroof) %></li>
 

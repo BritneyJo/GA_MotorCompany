@@ -1,30 +1,6 @@
 <h2>Edit Car</h2>
 
 
-<%= form_for(@car) do |f| %>
+<%= render partial: 'form', locals: {submit_button_value:'Edit!'} %>
 
-Make & Model:
-<%= f.text_field :name %>
 
-Type:
-<%= f.text_field :car_type %>
-
-Year:
-<%= f.text_field :year %>
-
-Color:
-<%= f.text_field :color %>
-
-Performance:
-<%= f.text_field :performance %>
-
-Sun Roof:
-yes<%= f.radio_button :sunroof, true %>
-no<%= f.radio_button :sunroof, false %>
-
-Seat Heaters:
-yes<%= f.radio_button :seat_heaters, true %>
-no<%= f.radio_button :seat_heaters, false %>
-
-<%= f.submit 'edit!' %>
-<% end %>
