@@ -1,6 +1,5 @@
-<h2>Edit Car</h2>
+<%= form_for @car do |f| %>
+	<%= render partial: 'form', locals: {f: f} %>
 
-
-<%= render partial: 'form', locals: {submit_button_value:'Edit!'} %>
-
-
+	<button type="submit" class="btn">Edit!</button>
+<% end %>
