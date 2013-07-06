@@ -6,10 +6,14 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Car.create! name: 'VW Beetle', car_type: 'sedan', year: 1965, color: 'white', sunroof: 'false', performance: 120, seat_heaters: 'false'
-Car.create! name: 'Jeep Wrangler', car_type: 'SUV', year: 2010, color: 'green', sunroof: 'true', performance: 200, seat_heaters: 'false'
-Car.create! name: 'Jaguar XKR-S', car_type: 'convertible', year: 2013, color: 'blue', sunroof: 'true', performance: 550, seat_heaters: 'true'
-Car.create! name: 'Land Rover Discovery', car_type: 'SUV', year: 2011, color: 'silver', sunroof: 'true', performance: 300, seat_heaters: 'true'
-Car.create! name: 'Ford F-150', car_type: 'Pick-Up Truck', year: 2013, color: 'blue', sunroof: 'true', performance: 360, seat_heaters: 'false'
-Car.create! name: 'Infiniti FX', car_type: 'SUV', year: 2010, color: 'copper', sunroof: 'true', performance: 360, seat_heaters: 'false'
-Car.create! name: 'Volvo S60', car_type: 'sedan', year: 2009, color: 'silver', sunroof: 'true', performance: 250, seat_heaters: 'false'
+suv = Body.create description: "SUV"
+van = Body.create description: "Van"
+berline = Body.create description: "Berline"
+
+v8 = Engine.create description: "v8"
+turbo = Engine.create description: "turbo"
+diesel = Engine.create description: "Diesel"
+
+Car.create! name: 'VW Beetle', year: 1965, color: 'white', sunroof: 'false', performance: 120, seat_heaters: 'false', body_id: suv.id, engine_id: v8.id
+Car.create! name: 'Jeep Wrangler', year: 2010, color: 'green', sunroof: 'true', performance: 200, seat_heaters: 'false', body_id: van.id, engine_id: turbo.id
+Car.create! name: 'Jaguar XKR-S', year: 2013, color: 'blue', sunroof: 'true', performance: 550, seat_heaters: 'true', body_id: berline.id, engine_id: diesel.id
